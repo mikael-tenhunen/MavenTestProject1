@@ -1,5 +1,8 @@
 package view;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -24,6 +27,12 @@ public class IndexManager {
 
     public void setHelloString(String helloString) {
         this.helloString = helloString;
+    }
+    
+    public String getDate() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date);   
     }
     
 }
